@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+          body
+          {
+              font-family:sans-serif;
+          }
+        </style>
+        <title>Tu peso en Marte y Júpiter</title>
+    </head>
+    <body>
+        <h1>Tu peso en otro planeta</h1>
+        <p>En la Tierra pesas distinto que en Marte o Júpiter</p>
+        <script>
+            var usuario = prompt("¿Cuál es tu peso en kilogramos?");
+            var planeta = prompt("Elige tu planeta preferido\nEscribe 1 para Marte o 2 para Júpiter")
+            var peso = parseFloat(usuario);
+            var g_tierra = 9.8;
+            var g_marte = 3.7;
+            var g_jupiter = 24.8;
+            var peso_final;
+            var planeta_name
+
+            if(planeta == 1)
+            {
+                planeta_name = "Marte"
+                peso_final = peso * g_marte / g_tierra;
+            }
+            else if(planeta == 2)
+            {
+                planeta_name = "Jupiter"
+                peso_final = peso * g_jupiter / g_tierra;
+            }
+            else
+            {
+                peso_final = 1000000
+                planeta_name = "Gagarilandia"
+            }
+
+            document.write("Tu peso en " + planeta_name + " es de <strong>" + peso_final.toFixed(2) + " Kg</strong>");
+
+        </script>
+        <p>Desarrollado por Jean Paul Fernandez</p>
+    </body>
+</html>
